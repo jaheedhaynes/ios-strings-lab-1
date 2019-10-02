@@ -14,20 +14,39 @@
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
 
+var numString = ""
+for num in 1...10 {
+    numString += String(num)
+}
+print(numString)
 ***
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
-
-***
+var numString = ""
+for num in 5...51 where num % 2 == 0 {
+numString += String(num) + (" ")
+}
+print(numString)
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
+
+var numString = ""
+for num in 1...60 where num % 10 == 4 {
+numString += String(num) + (" ")
+}
+print(numString)
 
 ***
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+
+let myString = "Hello World!"
+for char in myString {
+    print("\(char)")
+}
 
 ***
 ## Question 5
@@ -48,16 +67,64 @@ Write code that switches on a string, given the following conditions:
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
+let character: Character = "y"
+if character.isLetter {
+print("\(character1) is a letter")
+}
+
 ***
 ## Question 8
 
 Build five pairs of **canonically equivalent** strings, the first of each being a pre-composed character and the second being one that uses combinable unicode scalars. Show that they are equivalent.
 
+let a = "A"
+let b = "\u{0041}"
+if a == b {
+print("they are equal")
+} else {
+    print("they are not equal")
+}
+
+let a = "B"
+let b = "\u{0042}"
+if a == b {
+print("they are equal")
+} else {
+    print("they are not equal")
+}
+
+let a = "C"
+let b = "\u{0043}"
+if a == b {
+print("they are equal")
+} else {
+    print("they are not equal")
+}
+
+let a = "D"
+let b = "\u{0044}"
+if a == b {
+print("they are equal")
+} else {
+    print("they are not equal")
+}
+
+let a = "E"
+let b = "\u{0045}"
+if a == b {
+print("they are equal")
+} else {
+    print("they are not equal")
+}
+
+
 ***
 ## Question 9
 
 **Using only Unicode**, print out `"HELLO WORLD!"`
+let message =
 
+"\u{0048}" + "\u{0045}" + "\u{004C}" + "\u{004C}" + "\u{0030}" + (" ") + "\u{0057}" + "\u{0030}" + "\u{0052}" + "\u{004C}" + "\u{0044}"
 ***
 ## Question 10
 
@@ -68,7 +135,8 @@ Build five pairs of **canonically equivalent** strings, the first of each being 
 
 **Using only Unicode**, print out `"HELLO WORLD!"` in another language.
 
-***
+"\u{0048}" + "\u{0030}" + "\u{004C}" + "\u{0041}" 
+
 ## Question 12
 
 Print the below flower box using the following information.
@@ -126,6 +194,27 @@ Input:
 Expected values:
 `replacedString = "R*plac* th* l*tt*r * with *"`
 
+var aString = "Replace the letter e with *"
+
+var replacedString = ""
+
+for character in aString {
+    let char = "\(character)"
+    if char == "e" {
+        replacedString = replacedString + "*"
+    } else {
+        replacedString = replacedString + char
+    }
+}
+print(replacedString)
+
+**OR**
+
+var aString = "Replace the letter e with *"
+aString = aString.replacingOccurrences(of: "e", with: "*")
+print(aString)
+
+
 ***
 ## Question 15
 
@@ -135,15 +224,18 @@ You are given a string stored in variable `aString`. Create a new string called 
 var aString = "this string has 29 characters"
 var reverse = ""
 
-// Your code here
 ```
-
 Example:
 Input:
 `var aString = "Hello"`
 
 Output:
 `"olleH"`
+
+var aString = "this string has 29 characters"
+var reverse = ""
+let reversed = String(aString.reversed())
+print(reversed)
 
 
 ## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print. 
