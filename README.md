@@ -178,7 +178,25 @@ Flower Box:
 | ⚘ | ⚘ | ⚘ | ⚘ | ⚘ |
 - - - - - - - - - - -
 ```
+```swift
 
+for _ in 1...10 {
+    print(terminator : "|\u{2698}|")
+}
+print()
+for _ in 1...10 {
+print(terminator : "|\u{2698}|")
+}
+print()
+for _ in 1...10 {
+print(terminator : "|\u{2698}|")
+}
+print()
+for _ in 1...10 {
+print(terminator : "|\u{2698}|")
+}
+
+```
 ***
 ## Question 13
 
