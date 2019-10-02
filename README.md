@@ -14,23 +14,32 @@
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
 
+```swift
+
 var numString = ""
 for num in 1...10 {
     numString += String(num)
 }
 print(numString)
+```
 ***
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
+```swift
+
 var numString = ""
 for num in 5...51 where num % 2 == 0 {
 numString += String(num) + (" ")
 }
 print(numString)
+
+```
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
+
+```swift
 
 var numString = ""
 for num in 1...60 where num % 10 == 4 {
@@ -38,16 +47,18 @@ numString += String(num) + (" ")
 }
 print(numString)
 
+```
 ***
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+```swift
 
 let myString = "Hello World!"
 for char in myString {
     print("\(char)")
 }
-
+```
 ***
 ## Question 5
 
@@ -67,11 +78,12 @@ Write code that switches on a string, given the following conditions:
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
+```swift
 let character: Character = "y"
 if character.isLetter {
 print("\(character1) is a letter")
 }
-
+```
 ***
 ## Question 8
 
@@ -124,9 +136,13 @@ print("they are equal")
 
 **Using only Unicode**, print out `"HELLO WORLD!"`
 let message =
+``` swift
 
 "\u{0048}" + "\u{0045}" + "\u{004C}" + "\u{004C}" + "\u{0030}" + (" ") + "\u{0057}" + "\u{0030}" + "\u{0052}" + "\u{004C}" + "\u{0044}"
+
+```
 ***
+
 ## Question 10
 
 **Using only Unicode**, print out your name.
@@ -136,7 +152,10 @@ let message =
 
 **Using only Unicode**, print out `"HELLO WORLD!"` in another language.
 
+```swift
+
 "\u{0048}" + "\u{0030}" + "\u{004C}" + "\u{0041}" 
+```
 
 ## Question 12
 
@@ -194,6 +213,7 @@ Input:
 
 Expected values:
 `replacedString = "R*plac* th* l*tt*r * with *"`
+```swift
 
 var aString = "Replace the letter e with *"
 
@@ -208,13 +228,16 @@ for character in aString {
     }
 }
 print(replacedString)
-
+```
 **OR**
+
+```swift
 
 var aString = "Replace the letter e with *"
 aString = aString.replacingOccurrences(of: "e", with: "*")
 print(aString)
 
+```
 
 ***
 ## Question 15
@@ -232,12 +255,14 @@ Input:
 
 Output:
 `"olleH"`
+``` swift
 
 var aString = "this string has 29 characters"
 var reverse = ""
 let reversed = String(aString.reversed())
 print(reversed)
 
+```
 
 ## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print. 
 
