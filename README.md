@@ -76,6 +76,7 @@ print("\(character1) is a letter")
 ## Question 8
 
 Build five pairs of **canonically equivalent** strings, the first of each being a pre-composed character and the second being one that uses combinable unicode scalars. Show that they are equivalent.
+```swift
 
 let a = "A"
 let b = "\u{0041}"
@@ -116,7 +117,7 @@ print("they are equal")
 } else {
     print("they are not equal")
 }
-
+```
 
 ***
 ## Question 9
