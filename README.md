@@ -180,21 +180,28 @@ Flower Box:
 ```
 ```swift
 
-for _ in 1...10 {
-    print(terminator : "|\u{2698}|")
-}
-print()
-for _ in 1...10 {
+print("- - - - - - - -")
+for _ in 1...5 {
 print(terminator : "|\u{2698}|")
 }
 print()
-for _ in 1...10 {
+for _ in 1...5 {
 print(terminator : "|\u{2698}|")
 }
 print()
-for _ in 1...10 {
+for _ in 1...5 {
 print(terminator : "|\u{2698}|")
 }
+print()
+for _ in 1...5 {
+print(terminator : "|\u{2698}|")
+}
+for _ in 1...5 {
+print(terminator : " ")
+}
+print()
+print("- - - - - - - -")
+
 
 ```
 ***
